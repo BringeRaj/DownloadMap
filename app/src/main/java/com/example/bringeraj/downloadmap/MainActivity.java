@@ -68,31 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                             OfflineRegion offlineRegion = offlineRegionsList.get(length - 1);
                                             tvName.setText(getRegionName(offlineRegion));
 
-                                            /*offlineRegion.setObserver(new OfflineRegion.OfflineRegionObserver() {
-                                                @Override
-                                                public void onStatusChanged(OfflineRegionStatus status) {
-                                                    // Calculate the download percentage
-                                                    double percentage = status.getRequiredResourceCount() >= 0
-                                                            ? (100.0 * status.getCompletedResourceCount() / status.getRequiredResourceCount()) :
-                                                            0.0;
-                                                    Integer percentageDownloaded = (int) Math.round(percentage);
-                                                    if (status.isComplete()) {
-                                                        tvPercentage.setText(percentageDownloaded);
-                                                    } else if (status.isRequiredResourceCountPrecise()) {
-                                                        tvPercentage.setText(percentageDownloaded);
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onError(OfflineRegionError error) {
-
-                                                }
-
-                                                @Override
-                                                public void mapboxTileCountLimitExceeded(long limit) {
-
-                                                }
-                                            });*/
                                             offlineRegion.getStatus(new OfflineRegion.OfflineRegionStatusCallback() {
                                                 @Override
                                                 public void onStatus(OfflineRegionStatus status) {
