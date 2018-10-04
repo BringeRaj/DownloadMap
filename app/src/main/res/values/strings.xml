@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DownloadMap</string>
+    <string name="mapbox_access_token">PASTE_YOUR_KEY</string>
+</resources>
